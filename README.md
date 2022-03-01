@@ -3,7 +3,7 @@ The implementaions of [PanoFlow: Learning Optical Flow for Panoramic Images](htt
 We achieve state-of-the-art accuracy on the public OmniFlowNet dataset and the proposed Flow360 dataset.
 This repository is built on the basis of [CSFlow](https://github.com/MasterHow/CSFlow).
 
-
+![](results/compare_quant.png)
 ![](results/compare.png)
 
 # Flow360 Datset
