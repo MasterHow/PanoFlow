@@ -34,6 +34,14 @@ https://share.weiyun.com/SoXICYgh
 python setup.py develop
 ```
 
+# Pretrained Model
+The pretrained model that the paper used can be found there:
+```
+https://share.weiyun.com/MVj65ZRD
+```
+Notice that the checkpoints don‘t consist of the CFE, 
+considering that CFE is an estimation method, you only need to turn it on while inferring.
+
 # Devs
 Hao Shi，YiFan Zhou
 
