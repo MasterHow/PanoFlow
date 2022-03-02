@@ -86,13 +86,13 @@ python ./tools/train.py
 --model PanoFlow(CSFlow)
 --dataset Flow360
 --data_root $YOUR_DATA_PATH$
---batch_size 1
+--batch_size 6
 --name PanoFlow(CSFlow)-test
 --validation Chairs
 --val_Chairs_root $YOUR_DATA_PATH$
 --num_steps 100
---lr 0.0004
---image_size 368 496
+--lr 0.000125
+--image_size 400 720
 --wdecay 0.0001
 ```
 To eval, use the following command format:
