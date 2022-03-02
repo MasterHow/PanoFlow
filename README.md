@@ -1,4 +1,4 @@
-# PanoFlow
+# PanoFlow: Learning Optical Flow for Panoramic Images
 The implementaions of [PanoFlow: Learning Optical Flow for Panoramic Images](https://arxiv.org/pdf/2202.13388.pdf). 
 We achieve state-of-the-art accuracy on the public OmniFlowNet dataset and the proposed Flow360 dataset.
 This repository is built on the basis of [CSFlow](https://github.com/MasterHow/CSFlow).
@@ -76,7 +76,8 @@ The pretrained model that the paper used can be found there:
 https://share.weiyun.com/MVj65ZRD
 ```
 Notice that the checkpoints don‘t consist of the CFE, 
-considering that CFE is an estimation method, you only need to turn it on while inferring.
+considering that CFE is an estimation method, 
+you only need to turn it on while inferring to obtain the 360° flow.
 
 # Folder Hierarchy
 \* local: you should create this folder in your local repository and these folders will not upload to remote repository.
