@@ -1,12 +1,12 @@
 # PanoFlow: Learning Optical Flow for Panoramic Images
-The implementaions of [PanoFlow: Learning Optical Flow for Panoramic Images](https://arxiv.org/pdf/2202.13388.pdf). 
+The implementations of [PanoFlow: Learning Optical Flow for Panoramic Images](https://arxiv.org/pdf/2202.13388.pdf). 
 We achieve state-of-the-art accuracy on the public OmniFlowNet dataset and the proposed Flow360 dataset.
 This repository is built on the basis of [CSFlow](https://github.com/MasterHow/CSFlow).
 
 ![](results/compare_quant.png)
 ![](results/compare.png)
 
-# Flow360 Datset
+# Flow360 Dataset
 ![](results/Flow360.png)
 From left to right: overlapping image pairs, optical flow, and semantics. 
 Flow360 dataset consists of 8 various city maps in four weathers: 
@@ -59,7 +59,7 @@ camvid_colors = OrderedDict([
 ])
 ```
 
-Any one can download our Flow360 dataset via this link.
+Anyone can download our Flow360 dataset via this link.
 
 ```
 https://share.weiyun.com/SoXICYgh
@@ -100,4 +100,4 @@ you only need to turn it on while inferring to obtain the 360° flow.
 Hao Shi，YiFan Zhou
 
 # Need Help?
-If you have any questions, welcome to send me an e-mail: haoshi@zju.edu.cn, and I will try my best to help you. =)
+If you have any questions, welcome to e-mail me: haoshi@zju.edu.cn, and I will try my best to help you. =)
