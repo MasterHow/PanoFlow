@@ -79,11 +79,38 @@ Notice that the checkpoints don‘t consist of the CFE,
 considering that CFE is an estimation method, 
 you only need to turn it on while inferring to obtain the 360° flow.
 
+# Train and Eval
+To train, use the following command format:
+```
+python ./tools/train.py
+--model PanoFlow(CSFlow)
+--dataset Flow360
+--data_root $YOUR_DATA_PATH$
+--batch_size 1
+--name PanoFlow(CSFlow)-test
+--validation Chairs
+--val_Chairs_root $YOUR_DATA_PATH$
+--num_steps 100
+--lr 0.0004
+--image_size 368 496
+--wdecay 0.0001
+```
+To eval, use the following command format:
+```
+python ./tools/eval.py
+--model CSFlow
+--restore_ckpt ./checkpoints/CSFlow-C+T+F.pth
+--validation Flow360
+--val_Flow360_root $YOUR_DATA_PATH$
+```
+For more details, please check the code or refer our [paper](https://arxiv.org/pdf/2202.13388.pdf).
+
 # Folder Hierarchy
 \* local: you should create this folder in your local repository and these folders will not upload to remote repository.
 ```
 ├── data (local)            # Store test/training data
 ├── checkpoints (local)     # Store the checkpoints
+├── runs (local)            # Store the training log
 ├── opticalflow             # All source code
 |   ├─ api                  # Called by tools
 |   ├─ core                 # Core code call by other directorys. Provide dataset, models ....
@@ -93,8 +120,6 @@ you only need to turn it on while inferring to obtain the 360° flow.
 ├── tools                   # Scripts for test and train
 ├── work_dirs (local)       # For developers to save thier own codes and assets
 ```
-
-# The Code is coming soon.
 
 # Devs
 Hao Shi，YiFan Zhou
