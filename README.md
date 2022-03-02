@@ -98,8 +98,9 @@ python ./tools/train.py
 To eval, use the following command format:
 ```
 python ./tools/eval.py
---model CSFlow
---restore_ckpt ./checkpoints/CSFlow-C+T+F.pth
+--model PanoFlow(CSFlow)
+--restore_ckpt ./checkpoints/PanoFlow(CSFlow)-wo-CFE.pth
+--CFE
 --validation Flow360
 --val_Flow360_root $YOUR_DATA_PATH$
 ```
