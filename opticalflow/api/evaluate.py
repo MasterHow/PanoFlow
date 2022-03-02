@@ -3,6 +3,7 @@ import torch
 
 import opticalflow.dataset as dataset
 from opticalflow.utils.utils import InputPadder
+from opticalflow.utils.flow_utils import convert_360_gt
 
 class Evaluator():
 
@@ -136,7 +137,7 @@ def validate_omni(model, data_root, gpus=[0]):
 
 
 @torch.no_grad()
-def validate_omni_cfe(model, data_root, gpus=[0]):
+def validate_omni_cfe(model, data_root, cvt_gt=False, gpus=[0]):
     """Peform validation using the OmniFlowNet Dataset, under PanoFlow Framework"""
     model.eval()
     results = {}
@@ -153,6 +154,10 @@ def validate_omni_cfe(model, data_root, gpus=[0]):
 
             padder = InputPadder(image1.shape)
             image1, image2 = padder.pad(image1, image2)
+
+            # convert gt to 360 flow
+            if cvt_gt:
+                flow_gt = convert_360_gt(flow_gt)
 
             # check if is 360 flow gt
             if flow_gt[0, :, :].max() > flow_gt.shape[2]//2:
@@ -274,7 +279,7 @@ def validate_flow360(model, data_root, gpus=[0]):
 
 
 @torch.no_grad()
-def validate_flow360_cfe(model, data_root, gpus=[0]):
+def validate_flow360_cfe(model, data_root, cvt_gt=False, gpus=[0]):
     """Peform validation using the Flow360 (test) split, under PanoFlow Framework"""
     model.eval()
     results = {}
@@ -292,6 +297,10 @@ def validate_flow360_cfe(model, data_root, gpus=[0]):
 
             padder = InputPadder(image1.shape)
             image1, image2 = padder.pad(image1, image2)
+
+            # convert gt to 360 flow
+            if cvt_gt:
+                flow_gt = convert_360_gt(flow_gt)
 
             # check if is 360 flow gt
             if flow_gt[0, :, :].max() > flow_gt.shape[2]//2:

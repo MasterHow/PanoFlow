@@ -1,7 +1,7 @@
 import os.path as osp
 import re
-
 import cv2
+import torch
 import numpy as np
 from PIL import Image
 from scipy import interpolate
@@ -283,3 +283,15 @@ def writeFlowKITTI(filename, uv):
     valid = np.ones([uv.shape[0], uv.shape[1], 1])
     uv = np.concatenate([uv, valid], axis=-1).astype(np.uint16)
     cv2.imwrite(filename, uv[..., ::-1])
+
+
+def convert_360_gt(flow_gt):
+    '''Convert gt to 360 flow'''
+    flow_gt = flow_gt.unsqueeze(dim=0)
+    flow_gt[:, 0] = torch.where(flow_gt[:, 0] > (flow_gt.shape[3] // 2),
+                                flow_gt[:, 0] - flow_gt.shape[3],
+                                flow_gt[:, 0])
+    flow_gt[:, 0] = torch.where(flow_gt[:, 0] < -(flow_gt.shape[3] // 2),
+                                flow_gt.shape[3] + flow_gt[:, 0],
+                                flow_gt[:, 0])
+    return flow_gt.squeeze()

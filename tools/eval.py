@@ -53,6 +53,10 @@ def parse_args():
         default=[],
         help='The dataset used to validate RAFT')
     parser.add_argument(
+        '--cvt_gt',
+        help='convert gt to 360 flow',
+        default=True)
+    parser.add_argument(
         '--change_gpu',
         help='train on cuda device but not cuda:0',
         action='store_true')
@@ -73,17 +77,17 @@ def main():
             if val_dataset == 'Flow360':
                 if args.change_gpu:
                     results.update(
-                        validate_flow360_cfe(model, args.val_Flow360_root, args.gpus))
+                        validate_flow360_cfe(model, args.val_Flow360_root, cvt_gt=args.cvt_gt, gpus=args.gpus))
                 else:
                     results.update(
-                        validate_flow360_cfe(model.module, args.val_Flow360_root))
+                        validate_flow360_cfe(model.module, args.val_Flow360_root, cvt_gt=args.cvt_gt))
             if val_dataset == 'Omni':
                 if args.change_gpu:
                     results.update(
-                        validate_omni_cfe(model, args.val_Omni_root, args.gpus))
+                        validate_omni_cfe(model, args.val_Omni_root, cvt_gt=args.cvt_gt, gpus=args.gpus))
                 else:
                     results.update(
-                        validate_omni_cfe(model.module, args.val_Omni_root))
+                        validate_omni_cfe(model.module, args.val_Omni_root, cvt_gt=args.cvt_gt))
     else:
         for val_dataset in args.validation:
             if val_dataset == 'Flow360':
