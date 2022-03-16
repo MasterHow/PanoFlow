@@ -60,11 +60,17 @@ camvid_colors = OrderedDict([
 ])
 ```
 
-Anyone can download our Flow360 dataset via this link.
+Anyone can download our Flow360 dataset via these links.
 
+Download link 1 (Tencent WeiYun):
 ```
 https://share.weiyun.com/SoXICYgh
 ```
+Download link 2 (Baidu Cloud):
+```
+https://pan.baidu.com/s/1ZjY6J-zN5Wb7JxRMeHvQSw?pwd=7u2v
+```
+The content in the above links are consistent, if you encounter network problems, you can try switching to the other link.
 
 # Install
 ```
