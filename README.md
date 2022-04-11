@@ -80,7 +80,7 @@ python setup.py develop
 # Pretrained Model
 The pretrained model that the paper used can be found there:
 ```
-https://share.weiyun.com/MVj65ZRD
+https://share.weiyun.com/SIpeQTNE
 ```
 Notice that the checkpoints don‘t consist of the CFE, 
 considering that CFE is an estimation method, 
