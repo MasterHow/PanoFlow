@@ -129,6 +129,17 @@ For more details, please check the code or refer our [paper](https://arxiv.org/p
 ├── work_dirs (local)       # For developers to save thier own codes and assets
 ```
 
+# Citation
+If you find our project helpful in your research, please cite with:
+```
+@article{shi2022panoflow,
+  title={PanoFlow: Learning optical flow for panoramic images},
+  author={Shi, Hao and Zhou, Yifan and Yang, Kailun and Ye, Yaozu and Yin, Xiaoting and Yin, Zhe and Meng, Shi and Wang, Kaiwei},
+  journal={arXiv preprint arXiv:2202.13388},
+  year={2022}
+}
+```
+
 # Devs
 Hao Shi，YiFan Zhou
 
