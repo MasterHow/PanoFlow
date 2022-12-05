@@ -1,16 +1,16 @@
 # PanoFlow: Learning Optical Flow for Panoramic Images
 The implementations of [PanoFlow: Learning Optical Flow for Panoramic Images](https://arxiv.org/pdf/2202.13388.pdf). 
-We achieve state-of-the-art accuracy on the public OmniFlowNet dataset and the proposed Flow360 dataset.
+We achieve state-of-the-art accuracy on the public OmniFlowNet dataset and the proposed FlowScape (Flow360) dataset.
 This repository is built on the basis of [CSFlow](https://github.com/MasterHow/CSFlow).
 
 ![](results/panoshow.png)
 ![](results/compare_quant.png)
 ![](results/compare_.png)
 
-# Flow360 Dataset
+# FlowScape (Flow360) Dataset
 ![](results/Flow360.png)
 From left to right: overlapping image pairs, optical flow, and semantics. 
-Flow360 dataset consists of 8 various city maps in four weathers: 
+FlowScape (Flow360) dataset consists of 8 various city maps in four weathers: 
 sunny, fog, cloud, and rain. 
 We collect 100 consecutive panoramic images at each random position, 
 resulting in a total of 6,400 frames with a resolution of 1024 x 512 , 
@@ -60,7 +60,7 @@ camvid_colors = OrderedDict([
 ])
 ```
 
-Anyone can download our Flow360 dataset via these links.
+Anyone can download our FlowScape (Flow360) dataset via these links.
 
 Download link 1 (Tencent WeiYun):
 ```
