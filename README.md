@@ -70,6 +70,10 @@ Download link 2 (Baidu Cloud):
 ```
 https://pan.baidu.com/s/1ZjY6J-zN5Wb7JxRMeHvQSw?pwd=7u2v
 ```
+Download link 3 (Google Drive):
+```
+https://drive.google.com/file/d/1cKJZBRprwS6fu6Nf4U0eU6lkqB88tW_v/view?usp=sharing
+```
 The content in the above links are consistent, if you encounter network problems, you can try switching to the other link.
 
 # Install
