@@ -62,18 +62,12 @@ camvid_colors = OrderedDict([
 
 Anyone can download our FlowScape (Flow360) dataset via these links.
 
-Download link 1 (Tencent WeiYun):
-```
-https://share.weiyun.com/SoXICYgh
-```
-Download link 2 (Baidu Cloud):
-```
-https://pan.baidu.com/s/1ZjY6J-zN5Wb7JxRMeHvQSw?pwd=7u2v
-```
-Download link 3 (Google Drive):
-```
-https://drive.google.com/file/d/1cKJZBRprwS6fu6Nf4U0eU6lkqB88tW_v/view?usp=sharing
-```
+Download link 1 [Tencent WeiYun](https://share.weiyun.com/SoXICYgh)
+
+Download link 2 [Baidu Cloud](https://pan.baidu.com/s/1ZjY6J-zN5Wb7JxRMeHvQSw?pwd=7u2v)
+
+Download link 3 [Google Drive](https://drive.google.com/file/d/1cKJZBRprwS6fu6Nf4U0eU6lkqB88tW_v/view?usp=sharing)
+
 The content in the above links are consistent, if you encounter network problems, you can try switching to the other link.
 
 # Install
@@ -83,9 +77,13 @@ python setup.py develop
 
 # Pretrained Model
 The pretrained model that the paper used can be found there:
-```
-https://share.weiyun.com/SIpeQTNE
-```
+
+Download link 1 [Tencent WeiYun](https://share.weiyun.com/SIpeQTNE)
+
+Download link 2 [Baidu Cloud](https://pan.baidu.com/s/10pmFoK8_Tc2y4790mQyBfA?pwd=FLOW)
+
+Download link 3 [Google Drive](https://drive.google.com/drive/folders/1Li3PpkjmxYWL4tdkY_tR8wOfOC9YmJE2?usp=sharing)
+
 Notice that the checkpoints don‘t consist of the CFE, 
 considering that CFE is an estimation method, 
 you only need to turn it on while inferring to obtain the 360° flow.
